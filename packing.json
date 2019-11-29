@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0-SNAPSHOT",
+  "dist": "stable",
+  "meta": {
+    "name": "lamia-m2-magevulndb",
+    "description": "Run Magento 2 Modulescan against known blacklisted modules without Magerun.",
+    "url": "https://github.com/Lamiafi/Magento2-Magevulndb-Standalone",
+    "category": "devel"
+  },
+  "vendor": {
+    "name": "Lamia Oy",
+    "license": "GPLv3",
+    "maintainer": "<devops@lamia.fi>"
+  },
+  "package": {
+    "type": "deb",
+    "arch": "all",
+    "depends": [],
+    "conflicts": [],
+    "provides": [],
+    "replaces": []
+  },
+  "sources": {
+    "type": "dir",
+    "src": {
+      "./audit.php": "/usr/bin/lamia-m2-magevulndb"
+    }
+  },
+  "deb": {
+    "before_install": "",
+    "after_install": "",
+    "before_remove": "",
+    "after_remove": "",
+    "before_upgrade": "",
+    "after_upgrade": ""
+  },
+  "release": {
+    "auto_tag": true,
+    "keep_copy": true,
+    "repository": "",
+    "dist": [
+      "ubuntu/trusty",
+      "ubuntu/xenial",
+      "ubuntu/bionic",
+      "ubuntu/disco",
+      "ubuntu/eoan"
+    ]
+  },
+  "custom": ""
+}
