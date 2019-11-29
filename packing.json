@@ -35,9 +35,9 @@
     "after_upgrade": ""
   },
   "release": {
-    "auto_tag": true,
+    "auto_tag": false,
     "keep_copy": true,
-    "repository": "",
+    "repository": "bamboo@repo.lamia.fi",
     "dist": [
       "ubuntu/trusty",
       "ubuntu/xenial",
