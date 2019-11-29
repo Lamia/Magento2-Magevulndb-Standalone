@@ -14,6 +14,11 @@ declare(strict_types=1);
  */
 
 namespace LamiaOy\Magento2\Framework {
+    if (!file_exists(getcwd()."/vendor/magento/framework/AppInterface.php")) {
+        echo 'Working directory must be Magento 2 root.';
+        die(1);
+    }
+
     require_once getcwd()."/vendor/magento/framework/AppInterface.php";
     require_once getcwd()."/vendor/magento/framework/App/Bootstrap.php";
     final class Application implements \Magento\Framework\AppInterface {
