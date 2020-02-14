@@ -8,7 +8,7 @@ declare(strict_types=1);
  *
  * This source file is released under GPLv3 license by copyright holders.
  * Please see LICENSE file for more specific licensing terms.
- * @copyright 2019 (c) Lamia Oy
+ * @copyright 2019-2020 (c) Lamia Oy
  * @author Niko Granö <niko@lamia.fi>
  *
  */
@@ -30,7 +30,7 @@ namespace LamiaOy\Magento2\Framework {
 
         public function catchException(\Magento\Framework\App\Bootstrap $bootstrap, \Exception $exception)
         {
-            // Just pass thye control to Bootstrap.
+            // Just pass to have control to Bootstrap.
             return false;
         }
     }
@@ -264,7 +264,7 @@ namespace LamiaOy\Magento2\Blacklist
         public function __construct(
             Version $version
         ) {
-            $this->version = $version;
+            $this->moduleVersion = $version;
         }
 
         /**
@@ -293,7 +293,7 @@ namespace LamiaOy\Magento2\Blacklist
                     }
                     $this->entries[] = new Entry(
                         (string)$data[0],
-                        $this->version->getModuleVersion((string)$data[0]),
+                        $this->moduleVersion->getModuleVersion((string)$data[0]),
                         (string)$data[1],
                         (string)$data[2],
                         $this->getFrontnameFromRoute((string)$data[2]),
@@ -404,6 +404,8 @@ namespace LamiaOy\Magento2\Blacklist
 
         public function __construct(Entry $entry, int $type, $message = "", $code = 0, Throwable $previous = null)
         {
+            $this->entry = $entry;
+            $this->type = $type;
             parent::__construct($message, $code, $previous);
         }
 
