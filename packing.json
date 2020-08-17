@@ -1,5 +1,5 @@
 {
-  "version": "1.0.4-SNAPSHOT",
+  "version": "1.0.4",
   "dist": "stable",
   "meta": {
     "name": "lamia-m2-magevulndb",
