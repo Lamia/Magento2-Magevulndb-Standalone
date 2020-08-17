@@ -37,14 +37,9 @@
   "release": {
     "auto_tag": true,
     "keep_copy": true,
-    "repository": "bamboo@repo.lamia.fi",
-    "dist": [
-      "ubuntu/trusty",
-      "ubuntu/xenial",
-      "ubuntu/bionic",
-      "ubuntu/disco",
-      "ubuntu/eoan",
-      "ubuntu/focal"
+    "publish": true,
+    "repos": [
+      "deb-focal.reg.lamia.fi"
     ]
   },
   "custom": ""
